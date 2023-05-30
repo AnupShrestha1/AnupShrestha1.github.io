@@ -6,6 +6,7 @@ function display(){
      let time = document.getElementById('t').value;
      let rate = document.getElementById('r').value;
      let si = (principal*rate*time)/100;
+     console.log(si);
      document.getElementById('interest').innerHTML=si;
  }
  
