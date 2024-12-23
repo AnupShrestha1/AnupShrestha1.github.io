@@ -6,13 +6,16 @@
     <title>Our Memories</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
-            color: #333;
-            overflow: hidden;
-        }
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(120deg, #ffecd2, #fcb69f); /* Gradient background */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: #333;
+        overflow: hidden;
+    }
         .slideshow-container {
             position: relative;
             max-width: 100%;
@@ -28,12 +31,13 @@
             height: 100%;
             position: absolute;
             text-align: center;
+            background-color: #f5f5f5; /* Light gray background */
         }
         .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(80%);
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            display: block;
         }
         .slide p {
             position: absolute;
@@ -94,20 +98,52 @@
 <body>
     <div class="slideshow-container">
         <div class="slide">
-            <img src="photo1.jpg" alt="Memory 1">
-            <p>That amazing trip to the mountains! 🏔️</p>
+            <img src="pics/FirstFlower.jpg" alt="Memory 1">
+            <p>The first flower I ever received from you.</p>
         </div>
         <div class="slide">
-            <img src="photo2.jpg" alt="Memory 2">
+            <img src="pics/Birthday.jpg" alt="Memory 2">
             <p>Celebrating your last birthday together! 🎂</p>
         </div>
         <div class="slide">
-            <img src="photo3.jpg" alt="Memory 3">
-            <p>Our cozy movie night and popcorn! 🍿</p>
+            <img src="pics/gym.jpg" alt="Memory 3">
+            <p>Wow! Look at us!</p>
         </div>
         <div class="slide">
-            <img src="photo4.jpg" alt="Memory 4">
-            <p>That time we laughed so hard we cried! 😂</p>
+            <img src="pics/burntBottle.jpg" alt="Memory 4">
+            <p>That time you so cutely showed me this 😂</p>
+        </div>
+        <div class="slide">
+            <img src="pics/mmm.jpg" alt="Memory 5">
+            <p>Hehe! You know what happened this day. 😂</p>
+        </div>
+        <div class="slide">
+            <img src="pics/best.jpg" alt="Memory 6">
+            <p>Wouldn't you say it's the best photo of you?</p>
+        </div>
+        <div class="slide">
+            <img src="pics/egg.jpg" alt="Memory 7">
+            <p>Such a cute egg you are 😂</p>
+        </div>
+        <div class="slide">
+            <img src="pics/cut.jpg" alt="Memory 8">
+            <p>The most cutest smile ever!</p>
+        </div>
+        <div class="slide">
+            <img src="pics/hesmine.jpg" alt="Memory 9">
+            <p>HE'S MINE! Wow, the grip.</p>
+        </div>
+        <div class="slide">
+            <img src="pics/IMG_20241004_133358.jpg" alt="Memory 10">
+            <p>Young Love, innit?</p>
+        </div>
+        <div class="slide">
+            <img src="pics/prot.jpg" alt="Memory 11">
+            <p>That time we looked like protagonists of a film.</p>
+        </div>
+        <div class="slide">
+            <img src="pics/hangry.jpg" alt="Memory 12">
+            <p>The hangriest macha has ever been.</p>
         </div>
 
         <div class="controls">
@@ -119,6 +155,14 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
         </div>
     </div>
 
@@ -144,11 +188,6 @@
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].classList.add("active");
         }
-
-        // Automatic slideshow
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000); // Change slide every 5 seconds
     </script>
 </body>
 </html>
